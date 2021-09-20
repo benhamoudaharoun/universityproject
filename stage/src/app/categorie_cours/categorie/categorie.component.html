@@ -1,0 +1,25 @@
+<table class="table table-striped table-dark">
+    <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">name categorie</th>
+      <th scope="col">options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of categories">
+      <th scope="row"> {{c.id}}</th>
+      <td>{{c.name}}</td>
+      
+      
+      
+      <td>
+        <button class="btn btn-success" routerLink="/update-categorie/{{c.id}}">UpDate</button>
+        <button class="btn btn-primary"  (click)="deleteCategorieCours(c.id)" >Delete</button>
+      </td>
+  
+    </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-danger" routerLink="/add-categorie">Add</button>

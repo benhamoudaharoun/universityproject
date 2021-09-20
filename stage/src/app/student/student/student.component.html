@@ -1,0 +1,32 @@
+
+<table class="table table-striped table-dark">
+  <thead>
+  <tr>
+    <th scope="col">#ID</th>
+    <th scope="col">Full Name</th>
+    <th scope="col">Phone Number</th>
+    
+    <th scope="col">Age</th>
+    <th scope="col">Address</th>
+    <th scope="col">Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let s of etudiants ">
+    <th scope="row">{{s.id}}</th>
+    <td>{{s.name}}</td>
+        <td>{{s.phone}}</td>
+        
+        <td>{{s.age}}</td>
+        <td>{{s.address}}</td>
+        <td>
+    <td>
+      <button class="btn btn-success" routerLink="/update/{{s.id}}" >UpDate</button>
+      <button class="btn btn-primary"(click)="deleteEtudiant(s.id)" >Delete</button>
+    </td>
+
+  </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-danger" routerLink="/add">Add</button>

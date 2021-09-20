@@ -1,0 +1,33 @@
+ <form #f="ngForm" (ngSubmit)="done1(f)">
+
+  <div >
+
+    <div class="input-group flex-nowrap ipu">
+      <div class="input-group-prepend">
+      </div>
+      <input  [(ngModel)]="etudiant.name" name="name" ngModel required #name="ngModel"  type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap ipu">
+      <div class="input-group-prepend">
+      </div>
+      <input  [(ngModel)]="etudiant.age" name="age" ngModel required #age="ngModel" type="text" class="form-control" placeholder="Age" aria-label="Password" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap ipu">
+      <div class="input-group-prepend">
+      </div>
+      <input  [(ngModel)]="etudiant.address"name="address" ngModel required #address="ngModel"  type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap ipu">
+      <div class="input-group-prepend">
+      </div>
+      <input [(ngModel)]="etudiant.phone"name="phone" type="text" class="form-control" placeholder="Phone" aria-label="Password" aria-describedby="addon-wrapping" ngModel required #phone="ngModel">
+    </div>
+    
+      </div>
+  <div>
+      <button class="btn btn-primary" type="submit">Done</button>
+    </div>
+</form>
